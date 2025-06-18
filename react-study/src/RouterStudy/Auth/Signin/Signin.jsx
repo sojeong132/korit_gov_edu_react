@@ -174,7 +174,11 @@ function Signin(props) {
         })
         
         try{
-            await axios.post(url, data);
+            const response = await axios.post(url, data);
+            const accessToken = response.data?.accessToken;
+            if(!!accessToken) {
+                localStorage.setItem("AccessToken", accessToken);
+            }
             alert("로그인 완료");
         } catch(error) {
             alert("로그인 오류");
