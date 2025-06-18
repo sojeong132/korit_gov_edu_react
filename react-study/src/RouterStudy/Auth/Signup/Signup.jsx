@@ -303,7 +303,7 @@ function Signup(props) {
         try{
             const response = await axios.post(url, data);
             alert("사용자 등록 완료");
-            navigate("/users/signin", {
+            navigate("/users/signin", { 
                 state: {
                     username: response.data.username, 
                     password: inputItems.find(inputItem => inputItem.name === "password").value,
