@@ -49,7 +49,7 @@ function MainRouter(props) {
             <Routes>
                 <Route path='' element={<Home />} />
                 <Route path='/auth/*' element={<AuthRouter />} />
-                <Route path='/users/*' element={<UnAuthRouter setRefresh={setRefresh} />} />
+                <Route path='/users/*' element={<UnAuthRouter />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </RootLayout>
